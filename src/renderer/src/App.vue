@@ -6,21 +6,24 @@ const ipcHandle = () => window.electron.ipcRenderer.send('ping')
 
 <template>
   <div class="app-wrapper">
-    <div class="left"></div>
-    <AppWindow link="https:\/\/3.cn/1Y1wH-A1" />
+    <div class="left">324234</div>
+    <AppWindow class="right" link="https:\/\/3.cn/1Y1wH-A1" />
   </div>
 </template>
 
 <style lang="scss" scoped>
 .app-wrapper {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
 }
-</style>
 
-<style lang="scss">
-* {
-  box-sizing: border-box;
+.left {
+  flex-grow: 1;
+}
+
+.right {
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 </style>
