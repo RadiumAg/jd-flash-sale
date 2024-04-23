@@ -18,7 +18,6 @@ const ipcHandle = () => window.electron.ipcRenderer.send('ping')
       <NInput v-model:value="link" class="input" placeholder="请输入url" />
       <NButton @click="handleRefresh">刷新</NButton>
     </div>
-    <AppWindow ref="AppWindowRef" class="right" />
   </div>
 </template>
 
