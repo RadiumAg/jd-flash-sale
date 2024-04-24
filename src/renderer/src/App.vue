@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { NButton, NInput } from 'naive-ui'
 import AppWindow from './components/app-window.vue'
-import { ref } from 'vue'
 
 const link = ref()
 const AppWindowRef = ref<InstanceType<typeof AppWindow>>()
@@ -16,7 +16,7 @@ const ipcHandle = () => window.electron.ipcRenderer.send('ping')
   <div class="app-wrapper">
     <div class="left">
       <NInput v-model:value="link" class="input" placeholder="请输入url" />
-      <NButton @click="handleRefresh">刷新</NButton>
+      <NButton @click="handleRefresh">启动</NButton>
     </div>
   </div>
 </template>
@@ -40,5 +40,6 @@ const ipcHandle = () => window.electron.ipcRenderer.send('ping')
 
 .input {
   width: 400px;
+  margin-right: 10px;
 }
 </style>

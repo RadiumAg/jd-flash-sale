@@ -5,6 +5,9 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-size: cover;
   user-select: none;
+  background-size: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url('wavy-lines.svg');
 }
